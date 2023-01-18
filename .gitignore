@@ -1,2 +1,5 @@
 # python virtual environment path
 venv
+
+# jupyter related tmp files
+.ipynb_checkpoints
