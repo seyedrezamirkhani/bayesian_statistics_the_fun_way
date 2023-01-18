@@ -1,7 +1,7 @@
 from math import comb
 
 
-def calc_prob(k, n, p):
+def calc_binomial_prob(k, n, p):
     '''calculate probability mass function for binomial distribution'''
     return comb(n, k) * (p**k) * ((1 - p)**(n - k))
 
@@ -10,7 +10,7 @@ def at_least_k(k, n, p):
     '''calculate sum of probabilities for at least k selections from a binomial distribution'''
     s = 0.0
     for x in range(k, n + 1):
-        s += calc_prob(x, n, p)
+        s += calc_binomial_prob(x, n, p)
     return s
 
 
